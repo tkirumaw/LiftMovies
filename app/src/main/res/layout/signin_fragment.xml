@@ -46,6 +46,7 @@
         android:id="@+id/signInButton"
         android:layout_width="186dp"
         android:layout_height="54dp"
+        android:layout_marginTop="28dp"
         android:backgroundTint="@color/fondo_corp"
         android:backgroundTintMode="add"
         android:shadowColor="@color/fondo_corp"
@@ -55,9 +56,40 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
         app:strokeColor="@color/text_corp_1"
-        app:strokeWidth="2dp"
-        tools:layout_editor_absoluteY="302dp" />
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColorHint="@color/fondo_desmarcado"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/fondo_desmarcado"
+        app:hintTextColor="@color/text_corp_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etMail"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        app:startIconTint="@color/fondo_desmarcado">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/custom_input"
+            android:hint="@string/auth_password_text"
+            android:inputType="textPassword"
+            android:textColor="@color/text_corp_2"
+            android:textColorHighlight="@color/fondo_desmarcado"
+            android:textColorHint="@color/fondo_desmarcado"
+            app:hintTextColor="@color/fondo_desmarcado" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
         android:id="@+id/rememberCheckId"
